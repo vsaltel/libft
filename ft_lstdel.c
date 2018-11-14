@@ -1,16 +1,28 @@
-#include "t_list.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/14 11:41:48 by vsaltel           #+#    #+#             */
+/*   Updated: 2018/11/14 12:34:59 by vsaltel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	t_list	**chain;
+	t_list	*chain;
 
-	chain = alst;
+	chain = *alst;
 	while (chain != NULL)
 	{
-		alst = chain.next;
-		del(chain.content, chain.content_size);
+		*alst = chain->next;
+		del(chain->content, chain->content_size);
 		free(chain);
-		*chain = NULL;
-		chain = alst;
+		chain = NULL;
+		chain = *alst;
 	}
 }
