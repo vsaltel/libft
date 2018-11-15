@@ -6,7 +6,7 @@
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 14:31:56 by vsaltel           #+#    #+#             */
-/*   Updated: 2018/11/12 15:54:11 by vsaltel          ###   ########.fr       */
+/*   Updated: 2018/11/15 18:36:18 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strtrim(char const *s)
 	size_t	j;
 	size_t	end;
 
+	if (s == NULL)
+		return (NULL);
 	i = 0;
 	while ((s[i] == ' ' || s[i] == '\n' || s[i] == '\t') && s[i] != '\0')
 		i++;

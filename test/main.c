@@ -3,6 +3,10 @@
 
 	int	main(int argc, char **argv)
 	{
+
+		ft_putstr(ft_itoa(ft_atoi(argv[1])));
+
+		/*
 		char **tab;
 		char *s;
 		int i;
@@ -18,6 +22,7 @@
 			i++;
 		}
 		//ft_putstr(strncpy(str1, str2, 8));
+		*/
 		/*
 		ft_putnbr(atoi(argv[1]));
 		ft_putchar('\n');
