@@ -6,7 +6,7 @@
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 11:50:36 by vsaltel           #+#    #+#             */
-/*   Updated: 2018/11/15 18:38:54 by vsaltel          ###   ########.fr       */
+/*   Updated: 2018/11/16 11:30:00 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putendl_fd(char const *s, int fd)
 {
 	if (s == NULL)
-		return;
+		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

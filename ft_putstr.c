@@ -6,7 +6,7 @@
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:47:32 by vsaltel           #+#    #+#             */
-/*   Updated: 2018/11/15 18:37:40 by vsaltel          ###   ########.fr       */
+/*   Updated: 2018/11/16 11:30:10 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr(char const *s)
 	int i;
 
 	if (s == NULL)
-		return;
+		return ;
 	i = 0;
 	while (s[i])
 	{

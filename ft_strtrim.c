@@ -6,7 +6,7 @@
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 14:31:56 by vsaltel           #+#    #+#             */
-/*   Updated: 2018/11/15 18:36:18 by vsaltel          ###   ########.fr       */
+/*   Updated: 2018/11/16 11:27:54 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,7 @@ char	*ft_strtrim(char const *s)
 		return (NULL);
 	j = 0;
 	while (i <= end)
-	{
-		str[j] = s[i];
-		i++;
-		j++;
-	}
+		str[j++] = s[i++];
 	str[j] = '\0';
 	return (str);
 }

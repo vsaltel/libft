@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 12:24:00 by vsaltel           #+#    #+#             */
-/*   Updated: 2018/11/16 11:30:27 by vsaltel          ###   ########.fr       */
+/*   Created: 2018/11/16 13:27:51 by vsaltel           #+#    #+#             */
+/*   Updated: 2018/11/16 13:58:23 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	ft_lstaddend(t_list *alst, t_list *new)
 {
-	int i;
-	int j;
-
-	if (s == NULL)
+	if (alst == NULL)
 		return ;
-	i = 0;
-	j = ft_strlen(s);
-	while (i < j)
-	{
-		s[i] = '\0';
-		i++;
-	}
+	while (alst->next != NULL)
+		alst = alst->next;
+	alst->next = new;
 }

@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_lstcount.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 12:24:00 by vsaltel           #+#    #+#             */
-/*   Updated: 2018/11/16 11:30:27 by vsaltel          ###   ########.fr       */
+/*   Created: 2018/11/16 16:14:28 by vsaltel           #+#    #+#             */
+/*   Updated: 2018/11/16 16:35:42 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+int	ft_lstcount(t_list *alst)
 {
 	int i;
-	int j;
 
-	if (s == NULL)
-		return ;
 	i = 0;
-	j = ft_strlen(s);
-	while (i < j)
+	if (alst == NULL)
+		return (i);
+	while (alst != NULL)
 	{
-		s[i] = '\0';
 		i++;
+		alst = alst->next;
 	}
+	return (i);
 }

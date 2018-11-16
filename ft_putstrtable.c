@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_putstrtable.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 12:24:00 by vsaltel           #+#    #+#             */
-/*   Updated: 2018/11/16 11:30:27 by vsaltel          ###   ########.fr       */
+/*   Created: 2018/11/16 17:15:17 by vsaltel           #+#    #+#             */
+/*   Updated: 2018/11/16 17:15:19 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	ft_putstrtable(char **tab)
 {
 	int i;
-	int j;
 
-	if (s == NULL)
-		return ;
 	i = 0;
-	j = ft_strlen(s);
-	while (i < j)
+	while (tab[i] != 0)
 	{
-		s[i] = '\0';
+		ft_putendl(tab[i]);
 		i++;
 	}
 }

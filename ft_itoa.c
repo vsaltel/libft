@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa2.c                                         :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/15 17:37:36 by vsaltel           #+#    #+#             */
-/*   Updated: 2018/11/15 18:03:16 by vsaltel          ###   ########.fr       */
+/*   Created: 2018/11/16 17:10:30 by vsaltel           #+#    #+#             */
+/*   Updated: 2018/11/16 17:10:31 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static 	char	*result(int neg, long n, int size)
+static	char	*result(int neg, long n, int size)
 {
 	char	*str;
 
@@ -26,15 +26,15 @@ static 	char	*result(int neg, long n, int size)
 		str[size--] = ((n % 10) * neg) + 48;
 		n = n / 10;
 	}
-	str[size] = ((n % 10)* neg) + 48;
+	str[size] = ((n % 10) * neg) + 48;
 	return (str);
 }
 
 char			*ft_itoa(int n)
 {
-	int	size;
-	int	neg;
-	long n2;
+	int		size;
+	int		neg;
+	long	n2;
 
 	size = 0;
 	neg = 1;

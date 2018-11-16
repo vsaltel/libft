@@ -6,7 +6,7 @@
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:00:28 by vsaltel           #+#    #+#             */
-/*   Updated: 2018/11/15 18:19:50 by vsaltel          ###   ########.fr       */
+/*   Updated: 2018/11/16 11:29:44 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_memdel(void **ap)
 {
 	if (ap == NULL)
-		return;
+		return ;
 	free(*ap);
 	*ap = NULL;
 }

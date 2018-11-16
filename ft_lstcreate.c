@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_lstcreate.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 12:24:00 by vsaltel           #+#    #+#             */
-/*   Updated: 2018/11/16 11:30:27 by vsaltel          ###   ########.fr       */
+/*   Created: 2018/11/16 13:58:37 by vsaltel           #+#    #+#             */
+/*   Updated: 2018/11/16 15:47:58 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+t_list	*ft_lstcreate(int size)
 {
-	int i;
-	int j;
+	t_list *begin;
+	t_list *chain;
 
-	if (s == NULL)
-		return ;
-	i = 0;
-	j = ft_strlen(s);
-	while (i < j)
+	if (size < 1)
+		return (NULL);
+	if (!(chain = (t_list *)malloc(sizeof(t_list))))
+		return (NULL);
+	chain->content = NULL;
+	chain->content_size = 0;
+	begin = chain;
+	while (--size > 0)
 	{
-		s[i] = '\0';
-		i++;
+		if (!(chain->next = (t_list *)malloc(sizeof(t_list))))
+			return (NULL);
+		chain = chain->next;
+		chain->content = NULL;
+		chain->content_size = 0;
 	}
+	chain->next = NULL;
+	return (begin);
 }

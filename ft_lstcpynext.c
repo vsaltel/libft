@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_lstcpynext.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 12:24:00 by vsaltel           #+#    #+#             */
-/*   Updated: 2018/11/16 11:30:27 by vsaltel          ###   ########.fr       */
+/*   Created: 2018/11/16 13:54:50 by vsaltel           #+#    #+#             */
+/*   Updated: 2018/11/16 16:35:58 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+t_list	*ft_lstcpynext(t_list *alst)
 {
-	int i;
-	int j;
+	t_list *new;
 
-	if (s == NULL)
-		return ;
-	i = 0;
-	j = ft_strlen(s);
-	while (i < j)
-	{
-		s[i] = '\0';
-		i++;
-	}
+	if (!(new = (t_list*)malloc(sizeof(t_list))))
+		return (NULL);
+	new->content = alst->content;
+	new->content_size = alst->content_size;
+	new->next = alst->next;
+	alst->next = new;
+	return (new);
 }

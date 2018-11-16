@@ -6,7 +6,7 @@
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 16:20:13 by vsaltel           #+#    #+#             */
-/*   Updated: 2018/11/15 18:35:52 by vsaltel          ###   ########.fr       */
+/*   Updated: 2018/11/16 11:24:23 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,14 @@ static	size_t	nbword(char const *s, char c)
 	return (k);
 }
 
-char			**ft_strsplit(char const *s, char c)
+static	void	cutting(char **tab, char const *s, char c)
 {
-	char	**tab;
 	size_t	i;
 	size_t	j;
 	size_t	k;
 
 	i = 0;
 	k = 0;
-	if (s == NULL)
-		return (NULL);
-	if (!(tab = malloc(sizeof(*tab) * nbword(s, c) + 1)))
-		return (NULL);
 	while (s[i])
 	{
 		while (s[i] == c && s[i] != '\0')
@@ -58,5 +53,16 @@ char			**ft_strsplit(char const *s, char c)
 		i = j;
 	}
 	tab[k] = 0;
+}
+
+char			**ft_strsplit(char const *s, char c)
+{
+	char	**tab;
+
+	if (s == NULL)
+		return (NULL);
+	if (!(tab = malloc(sizeof(*tab) * nbword(s, c) + 1)))
+		return (NULL);
+	cutting(tab, s, c);
 	return (tab);
 }
