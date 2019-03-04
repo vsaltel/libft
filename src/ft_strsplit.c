@@ -6,7 +6,7 @@
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 16:20:13 by vsaltel           #+#    #+#             */
-/*   Updated: 2018/11/16 11:24:23 by vsaltel          ###   ########.fr       */
+/*   Updated: 2019/03/04 11:07:58 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char			**ft_strsplit(char const *s, char c)
 
 	if (s == NULL)
 		return (NULL);
-	if (!(tab = malloc(sizeof(*tab) * nbword(s, c) + 1)))
+	if (!(tab = malloc(sizeof(*tab) * (nbword(s, c) + 1))))
 		return (NULL);
 	cutting(tab, s, c);
 	return (tab);

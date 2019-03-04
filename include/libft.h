@@ -6,7 +6,7 @@
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:29:22 by vsaltel           #+#    #+#             */
-/*   Updated: 2018/11/16 17:22:20 by vsaltel          ###   ########.fr       */
+/*   Updated: 2019/03/04 11:33:38 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ int				ft_isdigit(int c);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
+int				ft_isspace(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 
@@ -93,4 +94,5 @@ t_list			*ft_lstcpynext(t_list *alst);
 t_list			*ft_lstcreate(int size);
 int				ft_lstcount(t_list *alst);
 void			ft_putstrtable(char **tab);
+char			*ft_strrev(char *s);
 #endif
