@@ -6,7 +6,7 @@
 /*   By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:29:22 by vsaltel           #+#    #+#             */
-/*   Updated: 2019/03/04 11:33:38 by vsaltel          ###   ########.fr       */
+/*   Updated: 2019/03/21 14:24:41 by vsaltel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,4 +95,6 @@ t_list			*ft_lstcreate(int size);
 int				ft_lstcount(t_list *alst);
 void			ft_putstrtable(char **tab);
 char			*ft_strrev(char *s);
+char			*ft_strfdup(const char *s1, const char *f);
+char			*ft_strfjoin(char const *s1, char const *s2, char const *f);
 #endif

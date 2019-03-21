@@ -6,7 +6,7 @@
 #    By: vsaltel <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 16:16:03 by vsaltel           #+#    #+#              #
-#    Updated: 2019/03/04 11:27:47 by vsaltel          ###   ########.fr        #
+#    Updated: 2019/03/21 14:25:40 by vsaltel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,6 +89,8 @@ FILES 	=	ft_memset.c							\
 			ft_lstcreate.c						\
 			ft_lstcount.c						\
 			ft_putstrtable.c					\
+			ft_strfjoin.c						\
+			ft_strfdup.c						\
 			get_next_line.c						\
 			printf/ft_printf.c					\
 			printf/display.c					\
